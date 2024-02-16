@@ -47,7 +47,7 @@ const Home = () => {
                             src="../../images/vila.jpg"
                             alt="First slide"
                         />
-                        <Carousel.Caption style={{ color: "black", textAlign: "center", top: "50%", transform: "translateY(-50%)" }}>
+                        <Carousel.Caption style={{ color: "#0F3D59", textAlign: "center", top: "40%", transform: "translateY(-40%)" }}>
                             <h3>Comparte nuestras aventuras y sumérgete en ellas</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -57,7 +57,7 @@ const Home = () => {
                             src="../../images/altea1.jpg"
                             alt="Second slide"
                         />
-                        <Carousel.Caption style={{ color: "black", textAlign: "center", top: "50%", transform: "translateY(-50%)" }}>
+                        <Carousel.Caption style={{ color: "#0F3D59", textAlign: "center", top: "40%", transform: "translateY(-40%)" }}>
                             <h3>Recarga energías</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -67,7 +67,7 @@ const Home = () => {
                             src="../../images/calpe1.jpg"
                             alt="third slide"
                         />
-                        <Carousel.Caption style={{ color: "black", textAlign: "center", top: "50%", transform: "translateY(-50%)" }}>
+                        <Carousel.Caption style={{ color: "#0F3D59", textAlign: "center", top: "30%", transform: "translateY(-30%)" }}>
                             <h3>Desconecta para reconectar</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -77,7 +77,7 @@ const Home = () => {
                             src="../../images/ibiza.jpg"
                             alt="fourth slide"
                         />
-                        <Carousel.Caption style={{ color: "black", textAlign: "center", top: "50%", transform: "translateY(-50%)" }}>
+                        <Carousel.Caption style={{ color: "#0F3D59", textAlign: "center", top: "50%", transform: "translateY(-50%)" }}>
                             <h3>Tu paz mental, no es negociable!!!</h3>
                         </Carousel.Caption>
                     </Carousel.Item>
