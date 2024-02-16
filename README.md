@@ -48,4 +48,11 @@ npm install bootstrap
 npm install react-modal
 npm install bootstrap
 
+# Comando de ejecución para ver el proyecto en local
+# cd node en backend
+nodemon app
+
+#cd frontreact en frontend
+npm start
+
 En resumen, el proyecto de Blog Viajero es una plataforma versátil que permite a los usuarios compartir sus experiencias de viaje de manera fácil y accesible, mientras ofrece una interfaz intuitiva y atractiva para navegar y gestionar las entradas del blog.
