@@ -14,10 +14,10 @@ code {
 
 /* Estilos personalizados para el carrusel */
 .carousel-item {
-  max-height: 700px; /* Altura máxima para todas las imágenes */
+  max-height: 600px; /* Altura máxima para todas las imágenes */
 }
 
 .button-spacing {
-  margin-right: 10px; /* Puedes ajustar el valor del margen según tu preferencia */
+  margin-right: 10px; /* margen de botones login */
 }
 
