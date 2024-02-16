@@ -24,7 +24,7 @@ function Navbar() {
                         <NavLink className="nav-link text-secondary" to="/" activeClassName="text-dark">Inicio</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link text-secondary" to="/categories" activeClassName="text-dark">Categorías</NavLink>
+                        <NavLink className="nav-link text-secondary" to="/categories" activeClassName="text-dark">Blogs</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink className="nav-link text-secondary" to="/login" activeClassName="text-dark">Login</NavLink>
