@@ -17,5 +17,7 @@ code {
   max-height: 700px; /* Altura máxima para todas las imágenes */
 }
 
-
+.button-spacing {
+  margin-right: 10px; /* Puedes ajustar el valor del margen según tu preferencia */
+}
 
