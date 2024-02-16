@@ -9,6 +9,7 @@ const RegisterForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,31 +23,33 @@ const RegisterForm = () => {
     e.preventDefault();
 
     // Validaciones
-    const errors = {};
+    const newErrors = {};
     if (!formData.name) {
-      errors.name = 'El nombre es obligatorio';
+      newErrors.name = 'El nombre es obligatorio';
     }
     if (!formData.email) {
-      errors.email = 'El correo electrónico es obligatorio';
+      newErrors.email = 'El correo electrónico es obligatorio';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'El correo electrónico es inválido';
+      newErrors.email = 'El correo electrónico es inválido';
     }
     if (!formData.password) {
-      errors.password = 'La contraseña es obligatoria';
-    } else if (formData.password.length < 6) {
-      errors.password = 'La contraseña debe tener al menos 6 caracteres';
+      newErrors.password = 'La contraseña es obligatoria';
+    } else if (formData.password.length < 8) {
+      newErrors.password = 'La contraseña debe tener al menos 8 caracteres';
     }
     if (formData.password !== formData.confirmPassword) {
-      errors.confirmPassword = 'Las contraseñas no coinciden';
+      newErrors.confirmPassword = 'Las contraseñas no coinciden';
     }
 
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(newErrors).length === 0) {
       // Enviar formulario si no hay errores
+      setShowModal(true);
+      setErrors({}); // Limpiar los errores
       console.log('Formulario enviado:', formData);
       // Aquí puedes agregar la lógica para enviar los datos a tu backend
     } else {
       // Mostrar errores
-      setErrors(errors);
+      setErrors(newErrors);
     }
   };
 
@@ -58,8 +61,8 @@ const RegisterForm = () => {
             <div className="card-body">
               <h2 className="card-title text-center mb-4">Registro</h2>
               <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">Nombre:</label>
+                <div className="form-group">
+                  <label htmlFor="name">Nombre:</label>
                   <input
                     type="text"
                     id="name"
@@ -70,8 +73,8 @@ const RegisterForm = () => {
                   />
                   {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Correo Electrónico:</label>
+                <div className="form-group">
+                  <label htmlFor="email">Correo Electrónico:</label>
                   <input
                     type="email"
                     id="email"
@@ -82,8 +85,8 @@ const RegisterForm = () => {
                   />
                   {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="password" className="form-label">Contraseña:</label>
+                <div className="form-group">
+                  <label htmlFor="password">Contraseña:</label>
                   <input
                     type="password"
                     id="password"
@@ -94,8 +97,8 @@ const RegisterForm = () => {
                   />
                   {errors.password && <div className="invalid-feedback">{errors.password}</div>}
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="confirmPassword" className="form-label">Confirmar Contraseña:</label>
+                <div className="form-group">
+                  <label htmlFor="confirmPassword">Confirmar Contraseña:</label>
                   <input
                     type="password"
                     id="confirmPassword"
@@ -106,12 +109,30 @@ const RegisterForm = () => {
                   />
                   {errors.confirmPassword && <div className="invalid-feedback">{errors.confirmPassword}</div>}
                 </div>
-                <button type="submit" className="btn btn-primary">Registrar</button>
+                <button type="submit" className="btn btn-primary mt-3">Registrar</button>
               </form>
             </div>
           </div>
         </div>
       </div>
+      {/* Modal de agradecimiento */}
+      {showModal && (
+        <div className="modal" tabIndex="-1" role="dialog" style={{ display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">¡Gracias por registrarte!</h5>
+                <button type="button" className="close" onClick={() => setShowModal(false)} aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <p>Gracias por registrarte. Revisa tu bandeja de entrada para más información.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

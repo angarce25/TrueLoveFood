@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Modal from 'react-modal';
 
 const ContactForm = ({ onSubmit }) => {
     const [formData, setFormData] = useState({
@@ -35,8 +36,21 @@ const ContactForm = ({ onSubmit }) => {
         }
     };
 
+    // Estilos personalizados para el modal
+    const modalStyles = {
+        content: {
+            width: '50%',
+            height: '20%',
+            margin: 'auto',
+            overflow: 'auto',
+            borderRadius: '8px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            backgroundColor: '#ffffff',
+        },
+    };
+
     return (
-        <div className="container mb-4">
+        <div className="container mt-4 mb-4">
             <div className="card">
                 <div className="card-body">
                     <h2 className="card-title text-center">Formulario de Contacto</h2>
@@ -58,7 +72,7 @@ const ContactForm = ({ onSubmit }) => {
                             <label htmlFor="phone" className="form-label">Teléfono</label>
                             <input
                                 type="tel"
-                                pattern="[0-9]{10}"
+                                pattern="[0-9]{9}"
                                 className={`form-control ${errors.phone && 'is-invalid'}`}
                                 id="phone"
                                 maxLength={10}
@@ -98,24 +112,20 @@ const ContactForm = ({ onSubmit }) => {
             </div>
 
             {/* Modal de agradecimiento */}
-            {showModal && (
-                <div className="modal">
-                    <div className="modal-dialog">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title">¡Gracias por contactarnos!</h5>
-                                <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
-                            </div>
-                            <div className="modal-body">
-                                <p>Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.</p>
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-primary" onClick={() => setShowModal(false)}>Cerrar</button>
-                            </div>
-                        </div>
+            <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)} style={modalStyles}>
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title">¡Gracias por contactarnos!</h5>
+                        <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
+                    </div>
+                    <div className="modal-body">
+                        <p>Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.</p>
+                    </div>
+                    <div className="modal-footer d-flex justify-content-center">
+                        <button type="button" className="btn btn-primary" onClick={() => setShowModal(false)}>Cerrar</button>
                     </div>
                 </div>
-            )}
+            </Modal>
         </div>
     );
 };
