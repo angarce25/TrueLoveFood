@@ -50,7 +50,7 @@ const ContactForm = ({ onSubmit }) => {
     };
 
     return (
-        <div className="container mt-4 mb-4">
+        <div className="container mb-4">
             <div className="card">
                 <div className="card-body">
                     <h2 className="card-title text-center">Formulario de Contacto</h2>
