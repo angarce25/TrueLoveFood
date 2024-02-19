@@ -13,7 +13,6 @@ import User from './components/pages/user.jsx';
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
         <NavBar />
         <Routes>
