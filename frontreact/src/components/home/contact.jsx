@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 
 const ContactForm = ({ onSubmit }) => {
-    const [formData, setFormData] = useState({
+    const initialFormData = {
         name: '',
         phone: '',
         email: '',
         comments: ''
-    });
+    };
+    
+    const [formData, setFormData] = useState(initialFormData);
     const [errors, setErrors] = useState({});
     const [showModal, setShowModal] = useState(false);
 
@@ -33,6 +35,9 @@ const ContactForm = ({ onSubmit }) => {
 
             // Mostrar el modal después de enviar el formulario
             setShowModal(true);
+            
+            // Limpiar el formulario después de enviar
+            setFormData(initialFormData);
         }
     };
 

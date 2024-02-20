@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
     const footerStyle = {
@@ -22,13 +23,13 @@ function Footer() {
                     <div className="col-md-12">
                         <ul className="list-unstyled" style={{ margin: '0', padding: '0' }}>
                             <li style={{ display: 'inline-block' }}>
-                                <a href="#" className="text-secondary"><i className="fab fa-facebook" style={socialIconsStyle}></i></a>
+                                <NavLink to="https://es-es.facebook.com/" className="text-secondary"><i className="fab fa-facebook" style={socialIconsStyle}></i></NavLink>
                             </li>
                             <li style={{ display: 'inline-block' }}>
-                                <a href="#" className="text-secondary"><i className="fab fa-twitter" style={socialIconsStyle}></i></a>
+                                <NavLink to="https://twitter.com/" className="text-secondary"><i className="fab fa-twitter" style={socialIconsStyle}></i></NavLink>
                             </li>
                             <li style={{ display: 'inline-block' }}>
-                                <a href="#" className="text-secondary"><i className="fab fa-instagram" style={socialIconsStyle}></i></a>
+                                <NavLink to="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F" className="text-secondary"><i className="fab fa-instagram" style={socialIconsStyle}></i></NavLink>
                             </li>
                         </ul>
                     </div>
@@ -39,4 +40,6 @@ function Footer() {
 }
 
 export default Footer;
+
+
 

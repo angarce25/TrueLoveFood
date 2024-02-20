@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 const RegisterForm = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: '',
     email: '',
     password: '',
     confirmPassword: ''
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
 
@@ -47,6 +48,8 @@ const RegisterForm = () => {
       setErrors({}); // Limpiar los errores
       console.log('Formulario enviado:', formData);
       // Aquí puedes agregar la lógica para enviar los datos a tu backend
+      // Limpiar campos después del envío
+      setFormData(initialFormData);
     } else {
       // Mostrar errores
       setErrors(newErrors);
