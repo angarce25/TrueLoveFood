@@ -8,7 +8,7 @@ En resumen, el proyecto de Blog Viajero es una plataforma versátil que permite 
 - **Conexión con Base de Datos:** El backend está conectado a una base de datos MySQL, permitiendo el almacenamiento de las entradas del blog.
 - **CRUD Completo:** Se implementa el método CRUD (Crear, Leer, Actualizar, Borrar) para las entradas del blog, lo que permite gestionar fácilmente el contenido.
 - **Pruebas Locales:** Todas las pruebas se realizan localmente en el entorno de desarrollo, utilizando el localhost para acceder a la aplicación.
-- **Despliegue Futuro:** En próximas versiones se tiene planeado implementar el despliegue del proyecto para hacerlo accesible en línea. Actualmente tenemos el diseño de la web en nuestro Figma https://www.figma.com/file/TbQuU9FbyBE1YYXu6NaciZ/TrueLoveFood?type=design&node-id=0%3A1&mode=design&t=nP7ZONQI6Gh6iKbS-1 
+- **Despliegue Futuro:** En próximas versiones se tiene planeado implementar el despliegue del proyecto para hacerlo accesible en línea. Actualmente tenemos el diseño de la web en nuestro Figma https://www.figma.com/file/TbQuU9FbyBE1YYXu6NaciZ/TrueLoveFood?type=design&node-id=0%3A1&mode=dev&t=EVxVV4huVItAKl6M-1
 - **Página de Usuario:** Se tiene previsto desarrollar una página de usuario donde los usuarios puedan iniciar sesión, gestionar su perfil y ver sus publicaciones.
 
 ## Tecnologías Utilizadas
