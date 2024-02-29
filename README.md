@@ -20,11 +20,30 @@ En resumen, el proyecto de Blog Viajero es una plataforma versátil que permite 
 - **Node.js:** Entorno de ejecución de JavaScript utilizado para construir el backend del proyecto.
 - **Sequelize:** ORM (Object-Relational Mapping) de Node.js utilizado para interactuar con la base de datos MySQL de forma sencilla y eficiente.
 
+
+
+
 ### Frontend
 
 - **React:** Biblioteca de JavaScript utilizada para construir la interfaz de usuario del frontend.
 - **Bootstrap:** Framework de CSS utilizado para el diseño y la maquetación de la aplicación, proporcionando un aspecto visual atractivo y responsivo.
 - **React Router DOM:** Librería de React utilizada para la navegación entre páginas de forma dinámica y sin recargar la página.
+
+## Test
+
+<div align="center">
+  <img src="https://github.com/angarce25/TrueLoveFood/assets/87614231/f104ba1c-5600-4636-ac08-37ca2093138e" alt="Test Image 1" width="400">
+</div>
+
+<div align="center">
+  <img src="https://github.com/angarce25/TrueLoveFood/assets/87614231/57192377-d472-4091-a902-f9a8120917c0" alt="Test Image 2" width="400">
+</div>
+
+<div align="center">
+  <img src="https://github.com/angarce25/TrueLoveFood/assets/87614231/6cdfa649-751e-4a1e-b235-c4aabacdff2a" alt="Test Image 3" width="400">
+</div>
+
+
 
 ## Instalación y Uso
 
