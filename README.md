@@ -29,7 +29,7 @@ En resumen, el proyecto de Blog Viajero es una plataforma versátil que permite 
 - **Bootstrap:** Framework de CSS utilizado para el diseño y la maquetación de la aplicación, proporcionando un aspecto visual atractivo y responsivo.
 - **React Router DOM:** Librería de React utilizada para la navegación entre páginas de forma dinámica y sin recargar la página.
 
-## Test
+## Test con Cypress
 
 <div align="center">
   <img src="https://github.com/angarce25/TrueLoveFood/assets/87614231/f104ba1c-5600-4636-ac08-37ca2093138e" alt="Test Image 1" width="400">
